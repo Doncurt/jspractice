@@ -1,18 +1,42 @@
 <html>
   <body>
       <div>
-          <p><input id ="price"</p>
-          <p><input id ="tip-percent"</p>
-          <p id=tip""></p>
+          <p><input id ="price"></p>
+          <p><input id ="tip-percent"></p>
+          <p id="tip">??</p>
           <p id="total">??</p>
+          <p id="fifteen">??</p>
+          <p id="eighteen">??</p>
+          <p id="twenty2">??</p>
           <p><button id ="calculate">calculate</button></p>
       </div>
       <!--try to put the script tage at the bottom for the purpose of loading functions without a callback -->
       <script>
+      const price= document.getElementById("price")
+      const percent= document.getElementById("tip-percent")
+      const tipView= document.getElementById("tip")
+      const totalView= document.getElementById("total")
+      const calculateButton = document.getElementById("calculate")
+      const fifteenView =document.getElementById("fifteen")
+      const eighteenView =document.getElementById("eighteen")
+      const twenty2View =document.getElementById("twenty2")
       const calculateTip=(price,percent) =>{
-        let tip= price * percent/100
+        let tip = price * percent/100
         return tip
       }
+      calculateButton.addEventListener('click', (e) => {
+        //turns the user input into numbers
+        console.log("yeeeee")
+        const prices= Number(price.value)
+        const percents = Number(percent.value)
+        const tip = calculateTip(prices,percents)
+        tipView.innerHTML= tip.toFixed(2)
+        totalView.innerHTML = tip + prices
+        fifteenView.innerHTML=prices * 0.15
+        eighteenView.innerHTML=prices * 0.18
+        twenty2View.innerHTML=prices * 0.22
+      })
+
       </script>
     </body>
 </html>
