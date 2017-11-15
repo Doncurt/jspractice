@@ -1,0 +1,18 @@
+<html>
+  <body>
+      <div>
+          <p><input id ="price"</p>
+          <p><input id ="tip-percent"</p>
+          <p id=tip""></p>
+          <p id="total">??</p>
+          <p><button id ="calculate">calculate</button></p>
+      </div>
+      <!--try to put the script tage at the bottom for the purpose of loading functions without a callback -->
+      <script>
+      const calculateTip=(price,percent) =>{
+        let tip= price * percent/100
+        return tip
+      }
+      </script>
+    </body>
+</html>
