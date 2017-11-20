@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>Change text Pracitce</title>
+</head>
+<body>
+<input id="text1"/>
+<input id="text2"/>
+<p id="output">?<p>
+<button id="clickMe">click me </button>
+<script>
+console.log("boom")
+const textOne= document.getElementById("text1")
+const textTwo = document.getElementById("text2")
+const out = document.getElementById("output")
+const clickIt= document.getElementById('clickMe')
+const addTextOneTwo =(textOne, textTwo)=>{
+  let stringAnswer= textOne + textTwo
+  return stringAnswer
+}
+clickIt.addEventListener('click', (e) => {
+  let one= textOne.value
+  let two =textTwo.value
+  const answer= addTextOneTwo(one,two)
+  out.innerHTML= answer
+
+})
+</script>
+</body>
+</html>
