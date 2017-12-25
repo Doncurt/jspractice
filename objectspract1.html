@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Object practice</title>
+  <head>
+<body>
+<h1 id = "name">Hotel name</h1>
+<p id = "price">price per night</p>
+<p id = "availibility">Availibility</p>
+
+
+<script>
+Hname= document.getElementById('name')
+hprice = document.getElementById('price')
+availible= document.getElementById('availibility')
+
+function hotel(name,price,booked){
+  this.totalRooms=100
+  this.name = name;
+  this.price = price;
+  this.booked = booked;
+  this.checkAvailability = function(){
+  return this.totalRooms - this.booked;
+};
+ this.availible= this.checkAvailability();
+
+}
+SFHotel = new hotel("SF Gate", 225, 73);
+Hname.innerHTML=SFHotel.name
+hprice.innerHTML= SFHotel.price
+availible.innerHTML=SFHotel.availible
+
+</script>
+</body>
+</html>

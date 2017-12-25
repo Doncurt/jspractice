@@ -9,20 +9,17 @@
 <button id="clickMe">click me </button>
 <script>
 console.log("boom")
-const textOne= document.getElementById("text1")
-const textTwo = document.getElementById("text2")
-const out = document.getElementById("output")
-const clickIt= document.getElementById('clickMe')
-const addTextOneTwo =(textOne, textTwo)=>{
-  let stringAnswer= textOne + textTwo
-  return stringAnswer
+const textOne= document.getElementById('text1')
+const textTwo = document.getElementById('text2')
+const out = document.getElementById('output')
+clickIt = document.getElementById('clickMe')
+const textAdd = (word1,word2)=>{
+  add = word1+word2
+  return add
 }
-clickIt.addEventListener('click', (e) => {
-  let one= textOne.value
-  let two =textTwo.value
-  const answer= addTextOneTwo(one,two)
-  out.innerHTML= answer
-
+clickIt.addEventListener('click', (e)=>{
+  add=textAdd(textOne.value,textTwo.value)
+  out.innerHTML=add
 })
 </script>
 </body>
