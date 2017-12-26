@@ -8,10 +8,9 @@ class Animal{
 
 }
 
-class Cat extends Animal{
-  constructor(name, usesLitterBox)
+class Cat extends Animal {
+  constructor(name, usesLitterBox){}
     super(name);
-    this.usesLitterBox= usesLitterBox
+    this._usesLitterBox= usesLitterBox
   }
-get
 }
