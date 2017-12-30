@@ -10,7 +10,7 @@ myArray.push('6','7');
 console.log(myArray);
 
 myArray.pop()
-
+ 
 console.log(myArray)
 
 console.log(myArray[myArray.length-1]);
